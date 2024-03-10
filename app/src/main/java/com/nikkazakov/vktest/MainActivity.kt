@@ -8,10 +8,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val fragment1 = Fragment1()
+        val productsFragment = ProductsFragment()
         supportFragmentManager
             .beginTransaction()
-            .add(R.id.activity_main_frame, fragment1)
+            .add(R.id.activity_main_frame, productsFragment)
             .commit()
     }
 }

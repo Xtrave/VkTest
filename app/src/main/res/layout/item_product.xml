@@ -7,10 +7,10 @@
     android:layout_marginHorizontal="8dp"
     android:layout_marginVertical="4dp"
     app:cardBackgroundColor="@color/purple_200"
-    app:cardCornerRadius="4dp"
+    app:cardCornerRadius="8dp"
     app:cardElevation="4dp"
     app:cardUseCompatPadding="true"
-    tools:context=".Fragment1">
+    tools:context=".ProductsFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/container"
