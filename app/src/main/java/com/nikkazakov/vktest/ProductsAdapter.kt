@@ -1,24 +1,26 @@
 package com.nikkazakov.vktest
 
-import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.paging.PagingDataAdapter
+import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.bumptech.glide.Glide
 import com.nikkazakov.vktest.retrofit.Product
 
-class Adapter : RecyclerView.Adapter<Adapter.ViewHolder>() {
+class ProductsAdapter(
+    diffCallback: DiffUtil.ItemCallback<Product>
+) : PagingDataAdapter<Product, ProductsAdapter.ViewHolder>(diffCallback) {
 
-    var productsList = listOf<Product>()
-        @SuppressLint("NotifyDataSetChanged")
-        set(value) {
-            field = value
-            notifyDataSetChanged()
-        }
+//    var productsList = listOf<Product>()
+//        @SuppressLint("NotifyDataSetChanged")
+//        set(value) {
+//            field = value
+//            notifyDataSetChanged()
+//        }
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val imageView = view.findViewById<ImageView>(R.id.imageView)
@@ -28,19 +30,19 @@ class Adapter : RecyclerView.Adapter<Adapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(
-            R.layout.card,
+            R.layout.item_product,
             parent,
             false
         )
         return ViewHolder(view)
     }
 
-    override fun getItemCount(): Int {
-        return productsList.size
-    }
+//    override fun getItemCount(): Int {
+//        return productsList.size
+//    }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val productItem = productsList[position]
+        val productItem = getItem(position) ?: return
         Glide.with(holder.imageView.context)
             .load(productItem.imageUrl)
             .into(holder.imageView)
