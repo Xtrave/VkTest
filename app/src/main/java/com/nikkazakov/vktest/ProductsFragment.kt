@@ -10,14 +10,8 @@ import androidx.lifecycle.lifecycleScope
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.recyclerview.widget.RecyclerView
-import com.nikkazakov.vktest.retrofit.ProductsApi
 import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.collectLatest
-import okhttp3.OkHttpClient
-import okhttp3.logging.HttpLoggingInterceptor
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
-
 
 @Suppress("NAME_SHADOWING")
 class ProductsFragment : Fragment() {
@@ -26,19 +20,6 @@ class ProductsFragment : Fragment() {
         ProductsAdapter(ProductComparator)
     }
 
-    private val interceptor = HttpLoggingInterceptor().apply {
-        level = HttpLoggingInterceptor.Level.BODY
-    }
-
-    private val client = OkHttpClient.Builder()
-        .addInterceptor(interceptor)
-        .build()
-
-    private val retrofit = Retrofit.Builder()
-        .baseUrl("https://dummyjson.com").client(client)
-        .addConverterFactory(GsonConverterFactory.create()).build()
-    private val productApi = retrofit.create(ProductsApi::class.java)
-
     private val flow = Pager(
         config = PagingConfig(
             pageSize = 20,
@@ -46,7 +27,7 @@ class ProductsFragment : Fragment() {
             initialLoadSize = 20
         )
     ) {
-        ProductsPagingSource(productApi)
+        Creator.getProductsPagingSource()
     }.flow
 
     @SuppressLint("MissingInflatedId")
