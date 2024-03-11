@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="titleText">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/size_20</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="descriptionText">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+</resources>

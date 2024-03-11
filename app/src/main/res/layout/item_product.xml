@@ -33,25 +33,22 @@
             android:layout_width="@dimen/space_0"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/space_8"
-            android:textColor="@color/white"
-            android:textSize="@dimen/size_20"
-            android:textStyle="bold"
+            style="@style/titleText"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/imageView"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="qwert" />
+            tools:text="Title" />
 
         <TextView
             android:id="@+id/tvDescription"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/space_0"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/space_4"
-            android:textColor="@color/white"
-            android:textStyle="italic"
+            style="@style/descriptionText"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/tvTitle"
             app:layout_constraintTop_toBottomOf="@+id/tvTitle"
-            tools:text="qwert" />
+            tools:text="Description" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>
