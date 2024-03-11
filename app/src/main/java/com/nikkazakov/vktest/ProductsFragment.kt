@@ -43,18 +43,10 @@ class ProductsFragment : Fragment() {
         rvProductList.adapter = adapter
 
         lifecycleScope.launch {
-            flow.collectLatest { products->
+            flow.collectLatest { products ->
                 adapter.submitData(products)
             }
         }
-
-//        lifecycleScope.launch(Dispatchers.IO) {
-//            val product = productApi.getProduct()
-//            withContext(Dispatchers.Main) {
-//                adapter.productsList = product.products
-//            }
-//        }
-
         return view
     }
 }
