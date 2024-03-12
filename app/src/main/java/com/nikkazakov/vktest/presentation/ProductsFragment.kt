@@ -1,4 +1,4 @@
-package com.nikkazakov.vktest
+package com.nikkazakov.vktest.presentation
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -10,6 +10,8 @@ import androidx.lifecycle.lifecycleScope
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.recyclerview.widget.RecyclerView
+import com.nikkazakov.vktest.R
+import com.nikkazakov.vktest.di.Creator
 import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.collectLatest
 

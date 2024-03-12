@@ -1,4 +1,4 @@
-package com.nikkazakov.vktest
+package com.nikkazakov.vktest.presentation
 
 import android.view.LayoutInflater
 import android.view.View
@@ -9,7 +9,8 @@ import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.nikkazakov.vktest.retrofit.Product
+import com.nikkazakov.vktest.R
+import com.nikkazakov.vktest.data.Product
 
 class ProductsAdapter(
     diffCallback: DiffUtil.ItemCallback<Product>

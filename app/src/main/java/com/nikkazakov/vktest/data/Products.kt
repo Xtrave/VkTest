@@ -1,6 +1,7 @@
-package com.nikkazakov.vktest.retrofit
+package com.nikkazakov.vktest.data
 
 import com.google.gson.annotations.SerializedName
+import com.nikkazakov.vktest.data.Product
 
 data class Products(
     @SerializedName("products")

@@ -1,7 +1,7 @@
-package com.nikkazakov.vktest
+package com.nikkazakov.vktest.presentation
 
 import androidx.recyclerview.widget.DiffUtil
-import com.nikkazakov.vktest.retrofit.Product
+import com.nikkazakov.vktest.data.Product
 
 object ProductComparator : DiffUtil.ItemCallback<Product>() {
     override fun areItemsTheSame(oldItem: Product, newItem: Product): Boolean {

@@ -1,5 +1,6 @@
-package com.nikkazakov.vktest.retrofit
+package com.nikkazakov.vktest.data
 
+import com.nikkazakov.vktest.data.Products
 import retrofit2.http.GET
 import retrofit2.http.Query
 

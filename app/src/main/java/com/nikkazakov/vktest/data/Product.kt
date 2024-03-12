@@ -1,4 +1,4 @@
-package com.nikkazakov.vktest.retrofit
+package com.nikkazakov.vktest.data
 
 import com.google.gson.annotations.SerializedName
 

@@ -1,9 +1,7 @@
-package com.nikkazakov.vktest
+package com.nikkazakov.vktest.data
 
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
-import com.nikkazakov.vktest.retrofit.Product
-import com.nikkazakov.vktest.retrofit.ProductsApi
 
 class ProductsPagingSource(
     val productsApi: ProductsApi

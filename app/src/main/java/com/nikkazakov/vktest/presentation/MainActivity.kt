@@ -1,7 +1,8 @@
-package com.nikkazakov.vktest
+package com.nikkazakov.vktest.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.nikkazakov.vktest.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -1,9 +1,10 @@
-package com.nikkazakov.vktest
+package com.nikkazakov.vktest.di
 
 import androidx.paging.PagingSource
-import com.nikkazakov.vktest.RetrofitClient.retrofit
-import com.nikkazakov.vktest.retrofit.Product
-import com.nikkazakov.vktest.retrofit.ProductsApi
+import com.nikkazakov.vktest.data.Product
+import com.nikkazakov.vktest.data.ProductsApi
+import com.nikkazakov.vktest.data.ProductsPagingSource
+import com.nikkazakov.vktest.data.RetrofitClient.retrofit
 
 object Creator {
 
